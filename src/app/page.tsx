@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 export default function Home() {
 
 
-  redirect('/dashboard/counter');
+  redirect('/dashboard/main');
 
   return (
     <>
