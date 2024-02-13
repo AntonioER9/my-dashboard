@@ -1,7 +1,11 @@
 // 'use client';
-import { PokemonGrid, PokemonsResponse, SimplePokemon } from "@/app/pokemons";
-import Image from 'next/image';
+import {  PokemonGrid, PokemonsResponse, SimplePokemon } from "@/pokemons";
 
+
+export const metadata = {
+ title: '151 Pokémons',
+ description: 'loremipsu',
+};
 
 const getPokemons = async(limit = 20, offset = 0):Promise<SimplePokemon[]> => {
     const data: PokemonsResponse = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`)
@@ -11,6 +15,8 @@ const getPokemons = async(limit = 20, offset = 0):Promise<SimplePokemon[]> => {
             id: pokemon.url.split('/').at(-2)!, //* ! siempre va a venir el resultado
             name: pokemon.name
         }))
+
+        // throw new Error('Esto es un error que no debería de suceder');
 
         return pokemons;
 }
