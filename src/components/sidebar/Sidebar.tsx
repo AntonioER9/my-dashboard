@@ -1,4 +1,4 @@
-import { SidebarMenuItem } from '@/components/SidebarMenuItem'
+import { SidebarMenuItem } from '@/components/sidebar/SidebarMenuItem'
 import Image from 'next/image'
 import React from 'react'
 import { IoBrowsersOutline, IoCalculator, IoFootball, IoHeartOutline, IoLogoReact } from 'react-icons/io5'
