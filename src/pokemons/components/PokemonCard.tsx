@@ -14,7 +14,7 @@ interface Props {
 export const PokemonCard = ({pokemon}: Props) => {
 
     const {id, name} = pokemon;
-    const isFavorite = useAppSelector(state => !!state.pokemons[id]) // !! de esta forma lo transforma en un valor booleano
+    const isFavorite = useAppSelector(state => !!state.pokemons.favorites[id]) // !! de esta forma lo transforma en un valor booleano
     const dispatch = useAppDispatch();
 
     const onToggle = () => {
